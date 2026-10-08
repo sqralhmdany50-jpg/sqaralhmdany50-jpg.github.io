@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صقر فؤاد الهمداني - مطور ومهتم بالتقنية والبرمجة والحلول الرقمية.">
+    <meta name="theme-color" content="#070b14">
+    <meta name="robots" content="index, follow">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070b14'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%2372e6c0' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>تواصل | صقر فؤاد الهمداني</title>
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-circle"></div><span>جاري تجهيز الصفحة...</span>
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/me.jpg" alt="صقر فؤاد الهمداني">
+            <strong>صقر<span>.</span></strong>
+        </a>
+
+        <nav id="navigation">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من أنا</a>
+            <a href="skills.html">المهارات</a>
+            <a href="projects.html">المشاريع</a>
+            <a href="services.html">الخدمات</a>
+            <a href="contact.html" class="active">تواصل</a>
+        </nav>
+
+        <div class="header-buttons">
+            <button id="themeBtn" type="button" aria-label="تبديل الوضع">☼</button>
+            <button id="menuBtn" type="button" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="section-title">
+                <small>05 / تواصل</small>
+                <h1>لنبنِ شيئًا<br><span>استثنائيًا.</span></h1>
+                <p>لديك فكرة أو مشروع؟<br>دعنا نتحدث ونحوّل فكرتك إلى شيء حقيقي.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+
+                    <div class="info-card">
+                        <div class="icon">✉</div>
+                        <div>
+                            <small>البريد الإلكتروني</small>
+                            <a id="emailLink" href="#">hello@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon">GH</div>
+                        <div>
+                            <small>GitHub</small>
+                            <a id="githubLink" href="#" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon">in</div>
+                        <div>
+                            <small>LinkedIn</small>
+                            <a id="linkedinLink" href="#" target="_blank" rel="noopener">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <strong>متاح للتعاون</strong>
+                        <p>إذا كان لديك مشروع أو فكرة تقنية، يمكنك التواصل معي وسأكون سعيدًا بمناقشة التفاصيل معك.</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="name">الاسم</label>
+                        <input id="name" name="name" type="text" placeholder="اكتب اسمك" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input id="email" name="email" type="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" name="message" rows="7" placeholder="اكتب تفاصيل مشروعك أو رسالتك..."
+                            required></textarea>
+                    </div>
+
+                    <button class="submit-btn" type="submit">
+                        <span>إرسال الرسالة</span><span>↗</span>
+                    </button>
+
+                    <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <div class="footer-icon">S</div>
+            <strong>صقر<span>.</span></strong>
+        </div>
+        <p>© <span id="year"></span> صقر فؤاد الهمداني — جميع الحقوق محفوظة.</p>
+        <a href="index.html">الرئيسية ↑</a>
+    </footer>
+
+    <script>
+        const CONFIG = {
+            email: "sqralhmdany50@gmail.com",
+            github: "https://github.com/sqralhmdany50-jpg/unihub",
+            linkedin: "",
+            formEndpoint: ""
+        };
+
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+                loader.classList.add("hide");
+                setTimeout(() => loader.remove(), 600);
+            }, 500);
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function setupLink(id, href, text) {
+            const link = document.getElementById(id);
+            if (!href) {
+                link.parentElement.style.display = "none";
+                return;
+            }
+            link.href = href;
+            link.textContent = text;
+        }
+
+        setupLink("emailLink", CONFIG.email ? "mailto:" + CONFIG.email : "", CONFIG.email);
+        setupLink("githubLink", CONFIG.github, "sqralhmdany50-jpg / UniHub");
+        setupLink("linkedinLink", CONFIG.linkedin, CONFIG.linkedin);
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navigation = document.getElementById("navigation");
+
+        menuBtn.addEventListener("click", () => {
+            const opened = navigation.classList.toggle("open");
+            menuBtn.setAttribute("aria-expanded", opened ? "true" : "false");
+        });
+
+        document.querySelectorAll("#navigation a").forEach(link => {
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        const themeBtn = document.getElementById("themeBtn");
+
+        function applyTheme(light) {
+            document.documentElement.classList.toggle("light", light);
+            themeBtn.textContent = light ? "☾" : "☼";
+        }
+
+        try {
+            applyTheme(localStorage.getItem("theme") === "light");
+        } catch (e) {
+            applyTheme(false);
+        }
+
+        themeBtn.addEventListener("click", () => {
+            const light = !document.documentElement.classList.contains("light");
+            applyTheme(light);
+            try {
+                localStorage.setItem("theme", light ? "light" : "dark");
+            } catch (e) { }
+        });
+
+        const form = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+
+        function showMessage(message, error = false) {
+            formMessage.textContent = message;
+            formMessage.classList.toggle("error", error);
+        }
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+
+            const data = new FormData(form);
+            if (data.get("_gotcha")) return;
+
+            const name = String(data.get("name") || "").trim();
+            const email = String(data.get("email") || "").trim();
+            const message = String(data.get("message") || "").trim();
+            const button = form.querySelector("button[type='submit']");
+
+            if (CONFIG.formEndpoint) {
+                button.disabled = true;
+                showMessage("جاري إرسال الرسالة...");
+
+                try {
+                    const response = await fetch(CONFIG.formEndpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({ name, email, message })
+                    });
+
+                    if (!response.ok) throw new Error();
+
+                    form.reset();
+                    showMessage("تم إرسال رسالتك بنجاح. شكرًا لك!");
+                } catch (error) {
+                    showMessage("تعذّر الإرسال، حاول مرة أخرى.", true);
+                } finally {
+                    button.disabled = false;
+                }
+                return;
+            }
+
+            const body = encodeURIComponent(
+                "مرحباً صقر\n\nالاسم: " + name +
+                "\nالبريد: " + email +
+                "\n\nالرسالة:\n" + message
+            );
+
+            showMessage("جاري فتح البريد لإرسال الرسالة...");
+            window.location.href =
+                "mailto:" + CONFIG.email +
+                "?subject=" + encodeURIComponent("رسالة من الموقع") +
+                "&body=" + body;
+        });
+    </script>
+</body>
+
+</html>

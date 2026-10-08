@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صقر فؤاد الهمداني - مطور ومهتم بالتقنية والبرمجة والحلول الرقمية.">
+    <meta name="theme-color" content="#070b14">
+    <meta name="robots" content="index, follow">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070b14'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%2372e6c0' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>من أنا | صقر فؤاد الهمداني</title>
+    <link rel="stylesheet" href="about.css">
+
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-circle"></div><span>جاري تجهيز التجربة...</span>
+    </div>
+    <header><a href="index.html" class="logo"><img src="images/me.jpg" alt="صقر الهمداني"><strong>صقر<span
+                    style="color:var(--primary)">.</span></strong></a>
+        <nav id="navigation"><a href="index.html" class="">الرئيسية</a><a href="about.html" class="page-nav-current">من
+                أنا</a><a href="skills.html" class="">المهارات</a><a href="projects.html" class="">المشاريع</a><a
+                href="services.html" class="">الخدمات</a><a href="contact.html" class="">تواصل</a></nav>
+        <div class="header-buttons"><button id="themeBtn" type="button"
+                aria-label="تبديل الوضع الفاتح والداكن">☼</button><button id="menuBtn" type="button"
+                aria-label="فتح القائمة" aria-expanded="false">☰</button></div>
+    </header>
+    <main class="page-main">
+        <section id="about">
+            <div class="section-title reveal">
+                <small>
+                    01 / نبذة
+                </small>
+                <h2>
+
+                    أصنع حضورًا
+
+                    <br />
+                    <span class="gradient">
+                        يُتذكر.
+                    </span>
+                </h2>
+            </div>
+            <!-- ✏️ عدّل هنا: أضف فقرة قصيرة عن خبرتك ودراستك داخل .about-text أسفله (مثلًا: دراستك، سنوات خبرتك، ما الذي تتقنه).
+                 ولإضافة صورتك الشخصية: ضعها في images/me.jpg ثم ضع هذا السطر قبل الفقرة:
+                 <img src="images/me.jpg" alt="صقر الهمدانيstyle="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:25px"> -->
+            <img alt="صقر الهمداني" src="images/me.jpg"
+                style=" width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:25px" />
+            <div class="about-wrapper">
+                <p class="about-text reveal">
+
+                    الموقع الجيد ليس مجرد ألوان وكود.
+
+                    <br /><br />
+
+                    هو تجربة متكاملة تبدأ من الفكرة،
+                    وتمر بالتصميم والهندسة،
+                    وتنتهي بمنتج سريع وواضح وقابل للنمو.
+
+                </p>
+                <div class="about-cards">
+                    <div class="about-card reveal">
+                        <span>
+                            01
+                        </span>
+                        <h3>
+                            دقة التفاصيل
+                        </h3>
+                        <p>
+                            الاهتمام بالتفاصيل الصغيرة
+                            التي تصنع الفرق في تجربة المستخدم.
+                        </p>
+                    </div>
+                    <div class="about-card reveal">
+                        <span>
+                            02
+                        </span>
+                        <h3>
+                            هندسة نظيفة
+                        </h3>
+                        <p>
+                            هيكلة منظمة وكود واضح
+                            يسهل تطويره وصيانته.
+                        </p>
+                    </div>
+                    <div class="about-card reveal">
+                        <span>
+                            03
+                        </span>
+                        <h3>
+                            جاهز للمستقبل
+                        </h3>
+                        <p>
+                            تصميم قابل للتوسع مع التركيز
+                            على السرعة والأمان.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <div>صقر<span style="color:var(--primary)">·</span></div>
+        </div>
+        <p>© <span id="year"></span> صقر فؤاد الهمداني — جميع الحقوق محفوظة.</p><a href="index.html">الرئيسية ↑</a>
+    </footer>
+    <script>
+        /* ==========================================================
+           ✏️ الإعدادات — عدّل هذا الجزء فقط
+        ========================================================== */
+        const CONFIG = {
+
+            // ✏️ بريدك الحقيقي (يظهر في قسم التواصل وتصل إليه الرسائل عند عدم وجود FORM_ENDPOINT)
+            email: "hello@example.com",
+
+            // ✏️ رابط حسابك في GitHub، مثال: "https://github.com/username"
+            //    اتركه فارغًا "" ليختفي من الموقع
+            github: "",
+
+            // ✏️ رابط حسابك في LinkedIn، مثال: "https://www.linkedin.com/in/username"
+            //    اتركه فارغًا "" ليختفي من الموقع
+            linkedin: "",
+
+            // ✏️ رابط استقبال الرسائل (موصى به). الطريقة:
+            //    1) سجّل مجانًا في https://formspree.io وأنشئ نموذجًا جديدًا
+            //    2) انسخ الرابط الذي يشبه: "https://formspree.io/f/xxxxxxxx"
+            //    3) الصقه هنا بين علامتي التنصيص
+            //    إن تركته فارغًا يفتح النموذج تطبيق البريد عند الزائر (وقد لا يعمل عند الجميع)
+            formEndpoint: ""
+        };
+
+
+        /* ========== LOADING ========== */
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            if (!loader) return;
+            setTimeout(function () {
+                loader.style.opacity = "0";
+                setTimeout(function () { loader.remove(); }, 700);
+            }, 500);
+        });
+
+        /* ========== YEAR ========== */
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        /* ========== CONTACT LINKS FROM CONFIG ========== */
+        (function () {
+            function fill(id, href, text) {
+                const a = document.getElementById(id);
+                if (!a) return;
+                if (!href) { a.remove(); return; }
+                a.href = href;
+                a.querySelector("span").textContent = text;
+                a.hidden = false;
+            }
+            fill("emailLink", CONFIG.email ? "mailto:" + CONFIG.email : "", CONFIG.email);
+            fill("githubLink", CONFIG.github, CONFIG.github.replace(/^https?:\/\/(www\.)?/, ""));
+            fill("linkedinLink", CONFIG.linkedin, CONFIG.linkedin.replace(/^https?:\/\/(www\.)?/, ""));
+        })();
+
+        /* ========== HIDE EMPTY PROJECT LINKS ========== */
+        document.querySelectorAll(".project-links").forEach(function (box) {
+            box.querySelectorAll('a[href="#"], a[href=""]').forEach(function (a) { a.remove(); });
+            if (!box.children.length) box.remove();
+        });
+
+        /* ========== MOBILE MENU ========== */
+        const menuBtn = document.getElementById("menuBtn");
+        const navigation = document.getElementById("navigation");
+        menuBtn.addEventListener("click", function () {
+            const open = navigation.classList.toggle("open");
+            menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        document.querySelectorAll("nav a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navigation.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+
+
+
+
+        /* ========== THEME (يُحفظ اختيار الزائر) ========== */
+        const themeBtn = document.getElementById("themeBtn");
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+        function applyTheme(light) {
+            document.documentElement.classList.toggle("light", light);
+            themeBtn.textContent = light ? "☾" : "☼";
+            if (themeMeta) themeMeta.setAttribute("content", light ? "#f5f7fb" : "#070b14");
+        }
+
+        try { applyTheme(localStorage.getItem("theme") === "light"); } catch (e) { applyTheme(false); }
+
+        themeBtn.addEventListener("click", function () {
+            const light = !document.documentElement.classList.contains("light");
+            applyTheme(light);
+            try { localStorage.setItem("theme", light ? "light" : "dark"); } catch (e) { }
+        });
+
+        /* ========== CONTACT FORM ========== */
+        const form = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+
+        function showMessage(text, isError) {
+            formMessage.textContent = text;
+            formMessage.classList.toggle("error", !!isError);
+        }
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const data = new FormData(form);
+            if (data.get("_gotcha")) return; // روبوت
+
+            const name = String(data.get("name") || "").trim();
+            const email = String(data.get("email") || "").trim();
+            const message = String(data.get("message") || "").trim();
+            const button = form.querySelector('button[type="submit"]');
+
+            // وضع 1: إرسال حقيقي عبر Formspree
+            if (CONFIG.formEndpoint) {
+                button.disabled = true;
+                showMessage("جاري الإرسال...", false);
+                try {
+                    const res = await fetch(CONFIG.formEndpoint, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify({ name: name, email: email, message: message })
+                    });
+                    if (!res.ok) throw new Error("bad status");
+                    form.reset();
+                    showMessage("تم إرسال رسالتك بنجاح. شكرًا لك!", false);
+                } catch (err) {
+                    showMessage("تعذّر الإرسال، حاول مرة أخرى أو راسلني عبر البريد مباشرة.", true);
+                } finally {
+                    button.disabled = false;
+                }
+                return;
+            }
+
+            // وضع 2 (احتياطي): فتح تطبيق البريد
+            const body = encodeURIComponent(
+                "مرحباً صقر\n\nالاسم: " + name +
+                "\nالبريد: " + email +
+                "\n\nالرسالة:\n" + message
+            );
+            showMessage("جاري فتح البريد لإرسال الرسالة...", false);
+            window.location.href = "mailto:" + CONFIG.email +
+                "?subject=" + encodeURIComponent("رسالة من الموقع") + "&body=" + body;
+        });
+
+        /* ========== MOUSE GLOW ========== */
+        let glowTick = false;
+        document.addEventListener("mousemove", function (event) {
+            if (glowTick) return;
+            glowTick = true;
+            requestAnimationFrame(function () {
+                const root = document.documentElement.style;
+                root.setProperty("--mx", (event.clientX / window.innerWidth * 100) + "%");
+                root.setProperty("--my", (event.clientY / window.innerHeight * 100) + "%");
+                glowTick = false;
+            });
+        });
+    </script>
+    <script>document.querySelectorAll('.reveal').forEach(function (x) { x.classList.add('show') });</script>
+</body>
+
+</html>
